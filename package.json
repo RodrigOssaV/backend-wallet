@@ -1,0 +1,27 @@
+{
+  "name": "backend-wallet",
+  "version": "1.0.0",
+  "description": "ionic-wallet-backend",
+  "main": "main.js",
+  "scripts": {
+    "dev": "nodemon src/main"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/RodrigOssaV/backend-wallet.git"
+  },
+  "author": "rossa",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/RodrigOssaV/backend-wallet/issues"
+  },
+  "homepage": "https://github.com/RodrigOssaV/backend-wallet#readme",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.18.2",
+    "morgan": "^1.10.0"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.22"
+  }
+}
