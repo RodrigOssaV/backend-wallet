@@ -27,7 +27,7 @@ module.exports = {
 
     add_services: async (req, res) => {
         //res.status(200).json({ status: 200, message: req.body });
-        console.log(req.body);
+        //console.log(req.body);
         try {
             await Service.bulkCreate(req.body, {
                 returning: true

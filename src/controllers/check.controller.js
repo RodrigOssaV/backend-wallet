@@ -3,13 +3,13 @@ const Check = require('../models/check.model');
 module.exports = {
 
     add_checks: async (req, res) => {
-        //console.log(req.body[0]);
+        console.log(req.body);
         let length = req.body.length;
-        //console.log(length);
+        console.log(length);
         if(length  === 1){
             //console.log('add one');
             let body = req.body[0];
-            //console.log(body);
+            console.log(body);
             let integer = parseInt(body.check_value);
             //console.log(integer);
             try {
@@ -17,7 +17,10 @@ module.exports = {
                     check_month: body.check_month,
                     check_value: integer,
                     check_owncheck: body.check_owncheck,
-                    check_service: body.check_service
+                    check_service: body.check_service,
+                    id_wallet: body.id_wallet,
+                    id_service: body.id_service,
+                    id_owncheck: body.id_owncheck
                 }).then(result => {
                     res.status(200).json({ status: 200, message: 'upload data', data: result });
                 });

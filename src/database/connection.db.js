@@ -7,9 +7,15 @@ const sequelize = new Sequelize(
     database.password,
     {
         host: database.host,
+        //port: 3000,
         dialect: database.dialect,
         logging: false,
-
+        /* ssl: {
+            rejectUnauthorized: true,
+        }, */
+        /* dialectOptions: {
+            socketPath: database.dialectOptions
+        }, */
         pool: {
             max: database.pool.max,
             min: database.pool.min,

@@ -3,6 +3,7 @@ const morgan = require('morgan');
 const cors = require('cors');
 
 const sequelize = require('./database/connection.db');
+require('./database/sequelize.relations');
 
 const app = express();
 
@@ -21,7 +22,7 @@ app.listen(app.get('port'), async () => {
     //console.log('Server on port: ', app.get('port'));
     try {
         await sequelize.authenticate();
-        await sequelize.sync({force:false}).then(() => {
+        await sequelize.sync({force:true}).then(() => {
             let namedb = sequelize.config.database
             console.log(`Connection has been established with '${namedb}-database' successfully.`)
         });
